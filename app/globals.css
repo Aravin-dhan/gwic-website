@@ -1,13 +1,13 @@
-/* Professional & Uniform Design Foundation */
+/* Biophilic Modernism Design Foundation */
 
 :root {
-  --primary-dark: #0D1B2A; /* Dark Navy */
-  --primary-blue: #1B263B;
-  --secondary-blue: #415A77;
-  --accent-grey: #778DA9;
-  --background-light: #E0E1DD;
+  --primary-blue: #055198;
+  --leaf-green: #4CAF50;
+  --soft-pink: #F48FB1;
+  --earthy-tone: #A1887F;
+  --background-light: #F5F5F5;
   --text-light: #FFFFFF;
-  --text-dark: #0D1B2A;
+  --text-dark: #212121;
 }
 
 /* General Body Styles */
@@ -23,10 +23,10 @@ body {
 /* Add Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* Full-width Container */
+/* Main Container */
 .container {
   width: 100%;
-  max-width: 1400px; /* Control max width on very large screens */
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
   box-sizing: border-box;
@@ -48,23 +48,11 @@ header .container {
   align-items: center;
 }
 
-.logo-container {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
 .logo {
   font-size: 2.2rem;
   font-weight: 800;
-  color: var(--primary-dark);
+  color: var(--primary-blue);
   text-decoration: none;
-}
-
-.university-name {
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  letter-spacing: 0.5px;
 }
 
 nav ul {
@@ -92,49 +80,16 @@ nav ul li a::after {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--primary-dark);
+  background-color: var(--primary-blue);
   transition: width 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: var(--primary-dark);
+  color: var(--primary-blue);
 }
 
 nav ul li a:hover::after {
   width: 100%;
-}
-
-/* Dropdown Menu for Resources */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: var(--text-light);
-  min-width: 220px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-  z-index: 1;
-  border-radius: 8px;
-  padding: 0.5rem 0;
-  margin-top: 0.5rem;
-}
-
-.dropdown-content a {
-  color: var(--text-dark);
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  display: block;
-  transition: background-color 0.2s ease;
-}
-
-.dropdown-content a:hover {
-  background-color: var(--background-light);
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
 
 /* Main Content */
@@ -144,7 +99,7 @@ main {
 
 /* Footer */
 footer {
-  background: var(--primary-dark);
+  background: var(--primary-blue);
   color: var(--background-light);
   padding: 2.5rem 0;
   margin-top: 4rem;

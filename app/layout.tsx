@@ -4,8 +4,8 @@ import Footer from "./components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "GWIC - GNLU Wellness Initiative Cell",
-  description: "A community-based approach to cultivating a nurturing and inclusive community.",
+  title: "GWIC Corporate Wellness & Engagement Platform",
+  description: "An ultra-modern, gamified, and engaging corporate wellness web application.",
 };
 
 export default function RootLayout({

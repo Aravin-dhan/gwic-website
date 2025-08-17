@@ -5,15 +5,14 @@ export default function Footer() {
     <footer>
       <div className="container">
         <div className="footer-info">
-          <p>&copy; 2025 Gujarat National Law University. All Rights Reserved.</p>
-          <p>GNLU Wellness Initiative Cell</p>
+          <p>&copy; 2025 GWIC. All Rights Reserved.</p>
+          <p>Contact: <a href="mailto:gwic@gnlu.ac.in" style={{ color: 'var(--background-light)', textDecoration: 'none' }}>gwic@gnlu.ac.in</a></p>
         </div>
         <div className="footer-links">
           <ul>
-            <li><Link href="/about">About Us</Link></li>
+            <li><Link href="/dashboard">Dashboard</Link></li>
             <li><Link href="/events">Events</Link></li>
-            <li><Link href="/blog">Blog</Link></li>
-            <li><Link href="/contact">Contact Us</Link></li>
+            <li><Link href="/games">Gamification</Link></li>
           </ul>
         </div>
       </div>
