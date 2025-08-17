@@ -1,164 +1,171 @@
-/* Joyful Nature Theme */
+/* Professional & Uniform Design Foundation */
 
 :root {
-  --primary-blue: #0a2e5c; /* Deep, vibrant dark blue */
-  --sunny-yellow: #ffc300;
-  --leaf-green: #4caf50;
-  --sky-blue: #87ceeb;
-  --background-light: #f0f8ff;
+  --primary-dark: #1a237e; /* Deep Indigo */
+  --primary-light: #534bae;
+  --accent-gold: #ffab00;
+  --background-light: #ffffff;
+  --background-grey: #f4f6f8;
+  --text-dark: #212121;
   --text-light: #ffffff;
-  --text-dark: #333333;
+  --text-secondary: #616161;
 }
 
 /* General Body Styles */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif; /* A more playful, rounded font */
+  font-family: 'Inter', sans-serif;
   background: var(--background-light);
   color: var(--text-dark);
   overflow-x: hidden;
 }
 
 /* Add Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* Header and Floating Navigation */
-header {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 1200px;
-  z-index: 1000;
-  padding: 10px 20px;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  border-radius: 30px; /* Prominent rounded corners */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+/* Full-width Container */
+.container {
+  width: 100%;
+  padding: 0 40px; /* Adjust padding for full-width feel */
+  box-sizing: border-box;
 }
 
-nav {
+/* Header */
+header {
+  background: var(--background-light);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
 
-nav .logo img {
-  height: 45px;
-  transition: transform 0.3s ease;
+.logo-container {
+  display: flex;
+  flex-direction: column;
 }
 
-nav .logo img:hover {
-  transform: scale(1.1) rotate(-5deg);
+.logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+.university-name {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 30px;
   margin: 0;
   padding: 0;
 }
 
 nav ul li a {
-  color: var(--primary-blue);
+  color: var(--text-dark);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 1rem;
   position: relative;
-  padding: 5px 0;
+  padding-bottom: 5px;
   transition: color 0.3s ease;
 }
 
 nav ul li a::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: 0;
   left: 0;
   width: 0;
-  height: 3px;
-  background-color: var(--leaf-green);
-  border-radius: 2px;
-  transition: width 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  height: 2px;
+  background-color: var(--primary-dark);
+  transition: width 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: var(--leaf-green);
+  color: var(--primary-dark);
 }
 
 nav ul li a:hover::after {
   width: 100%;
 }
 
-/* Dynamic Island Placeholder */
-.dynamic-island {
+/* Dropdown Menu for Resources */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #e0e0e0;
-  border-radius: 20px;
-  padding: 8px 12px;
-  cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  background-color: var(--background-light);
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  z-index: 1;
+  border-radius: 8px;
+  padding: 10px 0;
 }
 
-/* Main Content & Animations */
+.dropdown-content a {
+  color: var(--text-dark);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--background-grey);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Main Content */
 main {
-  padding-top: 120px; /* Offset for fixed header */
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-section {
-  background: var(--text-light);
-  margin-bottom: 40px;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  opacity: 0; /* Initial state for animation */
-  transform: translateY(30px); /* Initial state for animation */
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-/* Style for when section is visible */
-section.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-h1, h2, h3, h4 {
-  color: var(--primary-blue);
-  font-weight: 700;
-}
-
-/* Playful Buttons */
-button, .read-more {
-  background-color: var(--sunny-yellow);
-  color: var(--primary-blue);
-  border: none;
-  border-radius: 15px;
-  padding: 12px 25px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-button:hover, .read-more:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  padding: 40px 0;
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 40px 20px;
-  background: var(--primary-blue);
+  background: var(--primary-dark);
   color: var(--text-light);
-  margin-top: 50px;
+  padding: 40px 0;
+  margin-top: 60px;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
 }
