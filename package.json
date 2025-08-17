@@ -19,7 +19,8 @@
     "react-dom": "^18",
     "react-sudoku": "^1.0.9",
     "remark": "^15.0.1",
-    "remark-html": "^16.0.1"
+    "remark-html": "^16.0.1",
+    "socket.io-client": "^4.8.1"
   },
   "devDependencies": {
     "@types/node": "^20",
