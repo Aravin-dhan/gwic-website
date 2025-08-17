@@ -1,0 +1,109 @@
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background: #fff;
+    color: #333;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+nav .logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #a29bfe;
+}
+
+/* Main Content */
+main {
+    width: 80%;
+    margin: 20px auto;
+}
+
+section {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3, h4 {
+    color: #333;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #a29bfe;
+    color: white;
+    border-radius: 8px;
+}
+
+#hero h1 {
+    color: white;
+    font-size: 2.5em;
+}
+
+/* Team Section */
+#team h4 {
+    margin-top: 20px;
+    border-bottom: 2px solid #a29bfe;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+#team ul {
+    list-style: none;
+    padding: 0;
+}
+
+#team ul li {
+    background: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+}
