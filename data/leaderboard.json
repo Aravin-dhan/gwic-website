@@ -1,0 +1,4 @@
+[
+  { "userId": "1", "username": "demouser@gwic.com", "game": "Sudoku", "score": 1500, "timestamp": "2025-08-16T10:00:00Z" },
+  { "userId": "2", "username": "janedoe@gwic.com", "game": "Sudoku", "score": 2500, "timestamp": "2025-08-17T11:00:00Z" }
+]
