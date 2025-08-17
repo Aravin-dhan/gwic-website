@@ -28,6 +28,9 @@ export default async function GamesPage() {
               <Link href="/games/sudoku" style={{ padding: '1rem 2rem', background: 'var(--primary-blue)', color: 'var(--text-light)', textDecoration: 'none', borderRadius: '8px', fontWeight: '600' }}>
                 Play Sudoku
               </Link>
+              <Link href="/games/wordle" style={{ padding: '1rem 2rem', background: 'var(--primary-blue)', color: 'var(--text-light)', textDecoration: 'none', borderRadius: '8px', fontWeight: '600' }}>
+                Play Wordle
+              </Link>
               {/* Other games will be added here */}
             </div>
           </div>
