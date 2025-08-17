@@ -9,16 +9,22 @@ export default function TeamPage() {
 
   return (
     <div className="container">
-      <section style={{ padding: '40px 0' }}>
-        <h1 style={{ fontSize: '3rem', marginBottom: '40px', textAlign: 'center' }}>Our Team</h1>
-        <p style={{ textAlign: 'center', fontSize: '1.1rem', marginBottom: '40px' }}><strong>Faculty Convener:</strong> Ms. Harsha Rajwanshi</p>
+      <section style={{ padding: '3rem 0' }}>
+        <h1 style={{ fontSize: '3rem', marginBottom: '1rem', textAlign: 'center', color: 'var(--primary-dark)' }}>
+          Our Team
+        </h1>
+        <p style={{ textAlign: 'center', fontSize: '1.2rem', marginBottom: '4rem', color: 'var(--secondary-blue)' }}>
+          <strong>Faculty Convener:</strong> Ms. Harsha Rajwanshi
+        </p>
         
         {teams.map(team => (
-          <div key={team.batch} style={{ marginBottom: '40px' }}>
-            <h2 style={{ borderBottom: '2px solid var(--primary-dark)', paddingBottom: '10px', marginBottom: '20px' }}>Batch of {team.batch}</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '20px' }}>
+          <div key={team.batch} style={{ marginBottom: '3rem' }}>
+            <h2 style={{ fontSize: '1.8rem', color: 'var(--primary-blue)', borderBottom: '2px solid var(--accent-grey)', paddingBottom: '0.5rem', marginBottom: '1.5rem' }}>
+              Batch of {team.batch}
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '1.5rem' }}>
               {team.members.map(member => (
-                <div key={member} style={{ background: 'var(--background-grey)', padding: '20px', borderRadius: '8px', textAlign: 'center' }}>
+                <div key={member} style={{ background: 'var(--text-light)', padding: '1.5rem', borderRadius: '8px', textAlign: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
                   {member}
                 </div>
               ))}

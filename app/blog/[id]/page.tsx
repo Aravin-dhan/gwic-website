@@ -1,4 +1,5 @@
 import { getPostData, getAllPostIds } from '../../../lib/posts';
+import './post.css';
 
 export async function generateStaticParams() {
   const paths = getAllPostIds();
@@ -10,10 +11,10 @@ export default async function Post({ params }: { params: { id: string } }) {
 
   return (
     <div className="container">
-      <article style={{ padding: '40px 0', maxWidth: '800px', margin: '0 auto' }}>
-        <h1 style={{ fontSize: '3rem', marginBottom: '20px' }}>{postData.title}</h1>
-        <div style={{ color: 'var(--text-secondary)', marginBottom: '20px' }}>
-          {postData.date} - by {postData.author}
+      <article className="blog-post-content" style={{ padding: '3rem 0', maxWidth: '800px', margin: '0 auto' }}>
+        <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>{postData.title}</h1>
+        <div style={{ color: 'var(--secondary-blue)', marginBottom: '2rem' }}>
+          {new Date(postData.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })} - by {postData.author}
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>

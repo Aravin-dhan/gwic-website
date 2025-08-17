@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="container">
-        <div>
+        <div className="footer-info">
           <p>&copy; 2025 Gujarat National Law University. All Rights Reserved.</p>
           <p>GNLU Wellness Initiative Cell</p>
         </div>

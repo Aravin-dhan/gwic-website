@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 // A simple Sudoku board generator and solver would be too complex for a single file.
 // For this example, we'll use a pre-defined board and allow the user to fill it.
@@ -22,14 +22,14 @@ export default function Sudoku() {
   const [board, setBoard] = useState(initialBoard);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>, row: number, col: number) => {
-    const newBoard = [...board];
+    const newBoard = board.map(r => [...r]);
     const value = parseInt(e.target.value, 10);
     newBoard[row][col] = isNaN(value) ? 0 : value;
     setBoard(newBoard);
   };
 
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(9, 1fr)', gap: '5px', maxWidth: '500px', margin: '0 auto' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(9, 1fr)', gap: '5px', maxWidth: '500px', margin: '0 auto', border: '3px solid var(--primary-dark)' }}>
       {board.map((row, rowIndex) =>
         row.map((cell, colIndex) => (
           <input
@@ -45,11 +45,12 @@ export default function Sudoku() {
               height: '50px',
               textAlign: 'center',
               fontSize: '1.5rem',
-              border: '1px solid #ccc',
-              borderRadius: '5px',
-              backgroundColor: initialBoard[rowIndex][colIndex] !== 0 ? '#eee' : '#fff',
-              borderRight: (colIndex + 1) % 3 === 0 && colIndex < 8 ? '3px solid black' : '1px solid #ccc',
-              borderBottom: (rowIndex + 1) % 3 === 0 && rowIndex < 8 ? '3px solid black' : '1px solid #ccc',
+              border: '1px solid var(--accent-grey)',
+              borderRadius: '0',
+              backgroundColor: initialBoard[rowIndex][colIndex] !== 0 ? 'var(--background-light)' : 'var(--text-light)',
+              borderRight: (colIndex + 1) % 3 === 0 && colIndex < 8 ? '3px solid var(--primary-dark)' : '1px solid var(--accent-grey)',
+              borderBottom: (rowIndex + 1) % 3 === 0 && rowIndex < 8 ? '3px solid var(--primary-dark)' : '1px solid var(--accent-grey)',
+              color: 'var(--primary-dark)',
             }}
           />
         ))
