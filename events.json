@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Weekly Unwind Session",
+    "date": "2023-08-04T17:00:00",
+    "venue": "Online",
+    "brochureUrl": "https://example.com/gwic-brochure.pdf"
+  },
+  {
+    "title": "Mental Health Day",
+    "date": "2023-10-10T10:00:00",
+    "venue": "GNLU Campus",
+    "brochureUrl": "https://example.com/gwic-brochure.pdf"
+  },
+  {
+    "title": "Outlive Sensitization Workshop",
+    "date": "2023-11-15T14:00:00",
+    "venue": "Online",
+    "brochureUrl": "https://example.com/gwic-brochure.pdf"
+  },
+  {
+    "title": "Upcoming: Pottery Workshop",
+    "date": "2025-09-20T15:00:00",
+    "venue": "Arts & Crafts Center",
+    "brochureUrl": "https://example.com/gwic-brochure.pdf"
+  }
+]
